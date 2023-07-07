@@ -1,0 +1,21 @@
+h1{
+    color : red;
+}
+
+.database, td
+{
+    border: 2px solid black;
+    align-items: center;
+    text-align: center;
+}
+
+#sal
+{
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.head
+{
+    color : blue;
+}

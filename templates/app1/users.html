@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "app1/base.html" %}
+{% load static %}
+
+    <!-- <head>
+        <title>My user page</title>
+        
+    </head>
+    <body> -->
+        {% block body_block%}
+        <h1>Welcome buddy! this is from users.html</h1>
+        
+        <h2>here is the details!</h2><br>
+
+        <ol>
+            {% for item in user_info %}
+            <li>User info : </li>
+            <ul>
+                <li>id : {{item.id}}</li>
+                <li>name : {{item.first_name}}</li>
+                <li>mail : {{item.email}}</li>
+                <li>age : {{item.age}}</li>
+            </ul>
+            {% endfor %}
+        </ol>
+        {% endblock %}
+<!-- 
+    </body>
+</html> -->

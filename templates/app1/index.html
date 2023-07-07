@@ -1,0 +1,40 @@
+<!-- <!DOCTYPE html> -->
+{% extends "app1/base.html" %}
+{% load static %}
+
+
+    <!-- <head>
+        <title>My app1 page</title>
+        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    </head>
+    <body> -->
+        {% block body_block%}
+        <h1>Welcome buddy! this is from index.html</h1>
+        {{insert_here}} 
+        <!-- {{insert_here | upper }} --All the letters will be in upper case (Filter)  -->
+        <br><br>
+        <!-- we can inject the content here through views from app1 -->
+        <img src="{% static 'images/app1/iron_man.jpg' %}" alt="Oops! image is missing.">
+        <h2>This is how we can connect to database and fetch the information </h2><br>
+        {% if sal_info %}
+            <div >
+                <table>
+                    <thead class = 'head'>
+                        <th><b>Employee Id</b> </th>
+                        <th><b>Salary</b></th>
+                    </thead>
+                {% for acnt in sal_info %}
+                <tr class = 'database'>
+                    <td >{{acnt.emp}}</td>
+                    <td id = "sal">{{acnt.salary}}</td>
+                </tr>
+                {% endfor %}
+                </table>
+            </div>
+        {%else%}
+            <p>No Salary Details</p><br>
+        {% endif %}
+        {% endblock %}
+<!-- 
+    </body>
+</html> -->
